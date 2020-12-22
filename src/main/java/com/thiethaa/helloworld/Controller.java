@@ -14,4 +14,10 @@ public class Controller {
         String msg = " this is a message";
         return "Hello "+name+" Welcome Back!!! "+ msg;
     }
+    
+     @GetMapping("/test")
+    public String testAPI(@PathVariable("name") String name){
+        String msg = " this is a message";
+        return "Hello "+name+" Welcome Back!!! "+ msg;
+    }
 }
