@@ -17,7 +17,7 @@ script:
   - ./mvnw clean install
   - docker --version # print the version for logging
   - docker build -t travis-demo .
-  - docker tag travis-demo thiethaa/travis-demo:v.1.0.0
+  - docker tag travis-demo thiethaa/travis-demo:v.2.0.0
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
