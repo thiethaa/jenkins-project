@@ -16,9 +16,9 @@ before_script:
 script:
   - ./mvnw clean install
   - docker --version # print the version for logging
-  - docker build -t simple-express .
-  - docker tag simple-express drax7/simple-express:latest
+  - docker build -t travis-demo .
+  - docker tag thiethaa/travis-demo:v.1.0.0
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push drax7/simple-express
+  - docker push thiethaa/travis-demo:v.1.0.0
