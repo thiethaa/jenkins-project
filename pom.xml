@@ -44,6 +44,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>hello_world</finalName>
     </build>
 
 </project>
